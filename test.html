@@ -10,19 +10,30 @@
 <!-- using jquery to get the json file for the population data -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+<!-- using d3 v7 for the graphics -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script type ="text/javascript" src = "scripts/test.js"></script> 
 
+<!-- connecting to the javascript file-->
+<script type ="text/javascript" src = "scripts/test.js"></script> 
 
 
 </head>
 <body>
 
+<!-- within the body, pre-draw the svg for the geomap 
+as well as that for the slider and refresh data button -->
 <div id = 'geomap'>
 	<svg width = '800px' height = '600px'>
-		<g class='map'></g>
+		<g class='map'>
+		</g>
+
 	</svg>
 </div>
+<div id = 'interactive'>
+	<button>Refresh Data</button>
+	<input type='range' min = 1 max = 500 id='slider' value = 50 style="width: 560px;"> </input>
+</div>
+
 
 </body>
 </html>
