@@ -3,12 +3,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>geo</title>
+<title>ukgeomap</title>
 
-<script type ="text/javascript" src = "d3.v3/d3.v3.js"></script> 
+<link rel="stylesheet" href="styles/map.css" />
+
+<!-- using jquery to get the json file for the population data -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <script type ="text/javascript" src = "scripts/test.js"></script> 
+
+
 
 </head>
 <body>
+
+<div id = 'geomap'>
+	<svg width = '800px' height = '600px'>
+		<g class='map'></g>
+	</svg>
+</div>
+
 </body>
 </html>
