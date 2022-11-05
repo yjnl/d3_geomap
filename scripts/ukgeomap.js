@@ -60,12 +60,9 @@ function Draw() {
 	
 	//placing an svg within the geomap div, for the tooltip, and defining its style
 	//by default, the tooltip is hidden
-	
-	//the width presumes that Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
-	// is not in the list of possible town names
 	var tooltip = d3.select('#geomap')
 	.append('svg')
-	.attr('width','150px')
+	.attr('width','250px')
 	.attr('height','76px')
 	.style('visibility','hidden')
 	.style('background','white')
@@ -108,6 +105,8 @@ function Draw() {
 	});
 
 	// when data is loaded, the circles undergo an animation
+	// the radius is set to be the square root of the population so that 
+	// area is proportional to population
 	circles.transition()
 	.duration(500)
 	.ease(d3.easeCircleInOut)
