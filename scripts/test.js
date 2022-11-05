@@ -46,6 +46,8 @@ function Update_population_data(number_of_towns) {
 
 function Draw() {
 	//a rectangular projection transforms long/latitude into cartesian coordinates
+	// part of this following code block
+	// was adapted from d3.indepth.com/geographic/
 	let projection = d3.geoEquirectangular().fitSize([width,height],geoJson);
 	let geoGenerator = d3.geoPath().projection(projection);
 	d3.select('#geomap g.map')
