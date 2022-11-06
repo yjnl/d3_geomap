@@ -26,6 +26,12 @@ Current Features:
        that updates when the slider bar is moved
  - Circles change appearance to let the user know which town is being hovered on,
        and on hover, shows the position of the town with greater precision
+ - Reordering of town data in descending population so when drawn by svg,
+       smaller circles are drawn on top of larger circles, preventing
+       cases where a large circle completely covers a small circle and 
+       prevents hovering over it
+       Still does not account for the case where many small circles cover one
+       large circle
 
 
 Potential Future Features:
@@ -35,7 +41,8 @@ Potential Future Features:
        they view when the mouse is moved
  - Different types of map projections
  - Automatic scaling of textbox width depending on length of the text inside 
-
+ - When circles overlap, click to bring the currently-hovered circle to
+       the bottom layer so that the circle underneath can be accessed
 
  - Further code optimizations
  - Debugging of bugs yet to be identified
